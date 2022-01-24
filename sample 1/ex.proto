@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ex;
+
+// Defines the service
+service Test {
+    // Function invoked to send the request
+    rpc sendRequest (Request) returns (Reply) {}
+}
+
+// The request message containing requested numbers
+message Request {
+    int32 a = 1;
+
+}
+
+// The response message containing response
+message Reply {
+   int32 result = 1;
+}
